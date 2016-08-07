@@ -1,8 +1,18 @@
-h1 {
-  font-family: 'Montserrat';
-  font-weight: bolder;
+body {
+  font-family: 'Source Code Pro' !important;
 }
 
+h1 {
+  font-family: 'Source Code Pro' !important;
+}
+
+p {
+  font-family: 'Source Code Pro' !important;
+}
+
+input {
+  font-family: 'Source Code Pro' !important;
+}
 #message {
   font-weight: bold;
   font-size: 7rem;
@@ -10,7 +20,7 @@ h1 {
 }
 
 #lines {
-  color: #f35e3c;
+  font-weight: bolder;
 }
 #footer {
   position: fixed;

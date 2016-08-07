@@ -30,6 +30,7 @@ function calc(userName) {
     })
     .then(function() {
       document.getElementById("header").style.display = 'none';
+      document.getElementById("desc").style.display = 'none';
       document.getElementById("message").innerHTML = "YOU HAVE WRITTEN <span id='lines'>" + totalLines + "</span> LINES OF CODE."
       totalLines = 0;
     });
