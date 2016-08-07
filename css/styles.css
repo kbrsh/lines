@@ -13,7 +13,7 @@ button {
 }
 #message {
   font-weight: bold;
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 #lines {
@@ -21,7 +21,7 @@ button {
 }
 
 
-.center {
+.center-contain {
   display: table;
 }
 
