@@ -16,6 +16,7 @@ fetch('https://api.github.com/users/' + userName + '/repos?client_id=5c198d87bf1
   })
   .then(data => {
     for (var i = 0; i < data.length; i++) {
+      if(data[i].fork !== true) {
       fetch('https://api.github.com/repos/' + data[i].full_name + '/stats/contributors?client_id=5c198d87bf1396233db3&client_secret=6a17404d965bfe175c7675d605147def3b1032d7')
         .then(response => response.json())
         .then(contributors => contributors
@@ -23,6 +24,7 @@ fetch('https://api.github.com/users/' + userName + '/repos?client_id=5c198d87bf1
             .reduce((lineCount, week) => lineCount + week.a - week.d, 0)))
         .then(lineCounts => lineCounts.reduce((lineTotal, lineCount) => lineTotal + lineCount))
         .then(lines => totalLines = totalLines + lines)
+    }
     }
   })
   .then(function() {
