@@ -25,6 +25,9 @@ fetch('https://api.github.com/users/' + userName + '/repos?client_id=5c198d87bf1
         .then(lines => totalLines = totalLines + lines)
     }
   })
-  .then(alert(totalLines));
+  .then(function() {
+      alert(totalLines);
+      totalLines = 0;
+  });
 
 }
