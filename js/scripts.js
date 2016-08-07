@@ -4,6 +4,8 @@ document.getElementById("submit").addEventListener("click", function() {
   if (document.getElementById("username").value === "") {
     alert('Please enter a valid username');
   } else {
+    document.getElementById("submit").disabled = true;
+    document.getElementById("submit").innerHTML = "Loading";
     calc(document.getElementById("username").value);
   }
 });
@@ -33,6 +35,8 @@ function calc(userName) {
       document.getElementById("desc").style.display = 'none';
       document.getElementById("message").innerHTML = "YOU HAVE WRITTEN <span id='lines'>" + totalLines + "</span> LINES OF CODE."
       totalLines = 0;
+      document.getElementById("submit").disabled = false;
+      document.getElementById("submit").innerHTML = "Calculate";
     });
 
 }
