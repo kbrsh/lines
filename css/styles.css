@@ -1,0 +1,24 @@
+#footer {
+  position: fixed;
+  color: #0197F6;
+  z-index: 100;
+  font-family: 'Quicksand';
+  font-weight: bold;
+}
+
+  #footer {
+    right: 5%;
+    bottom: 5%;
+  }
+
+#footer a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+@media (max-width: 600px) {
+  #footer {
+      display: none;
+  }
+}
