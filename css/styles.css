@@ -1,3 +1,17 @@
+h1 {
+  font-family: 'Montserrat';
+  font-weight: bolder;
+}
+
+#message {
+  font-weight: bold;
+  font-size: 7rem;
+  color: #194ed1;
+}
+
+#lines {
+  color: #f35e3c;
+}
 #footer {
   position: fixed;
   z-index: 100;
