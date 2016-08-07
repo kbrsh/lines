@@ -11,10 +11,10 @@ input {
 button {
   font-family: 'Source Code Pro';
 }
-#message {
-  font-weight: bold;
-  font-size: 6rem;
-}
+/*#message {*/
+/*  font-weight: bold;*/
+/*  font-size: 6rem;*/
+/*}*/
 
 #lines {
   font-weight: bolder;
