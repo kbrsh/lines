@@ -1,17 +1,23 @@
 'use strict';
-
+var first = true;
+var totalLines = 0;
 document.getElementById("submit").addEventListener("click", function() {
   if (document.getElementById("username").value === "") {
     alert('Please enter a valid username');
   } else {
     document.getElementById("submit").disabled = true;
-    document.getElementById("submit").innerHTML = "Loading";
-    calc(document.getElementById("username").value);
+      calc(document.getElementById("username").value, function() {
+      document.getElementById("header").style.display = 'none';
+      document.getElementById("desc").style.display = 'none';
+      document.getElementById("message").innerHTML = "YOU HAVE WRITTEN <span id='lines'>" + totalLines + "</span> LINES OF CODE."
+      totalLines = 0;
+      document.getElementById("submit").disabled = false;
+      document.getElementById("submit").innerHTML = "Calculate";
+      });
   }
 });
-var totalLines = 0;
 
-function calc(userName) {
+function calc(userName, cb) {
   fetch('https://api.github.com/users/' + userName + '/repos?per_page=100&client_id=5c198d87bf1396233db3&client_secret=6a17404d965bfe175c7675d605147def3b1032d7')
     .then(res => {
       return res.json()
@@ -31,12 +37,7 @@ function calc(userName) {
       }
     })
     .then(function() {
-      document.getElementById("header").style.display = 'none';
-      document.getElementById("desc").style.display = 'none';
-      document.getElementById("message").innerHTML = "YOU HAVE WRITTEN <span id='lines'>" + totalLines + "</span> LINES OF CODE."
-      totalLines = 0;
-      document.getElementById("submit").disabled = false;
-      document.getElementById("submit").innerHTML = "Calculate";
+      cb();
     });
 
 }
