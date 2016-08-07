@@ -1,31 +1,43 @@
 body {
-  font-family: 'Source Code Pro' !important;
-}
-
-h1 {
-  font-family: 'Source Code Pro' !important;
-}
-
-p {
-  font-family: 'Source Code Pro' !important;
+  font-family: 'Source Code Pro';
+  background-color: #111;
+  color: #ccc;
 }
 
 input {
-  font-family: 'Source Code Pro' !important;
+  font-family: 'Source Code Pro';
+}
+
+button {
+  font-family: 'Source Code Pro';
 }
 #message {
   font-weight: bold;
   font-size: 7rem;
-  color: #194ed1;
 }
 
 #lines {
   font-weight: bolder;
 }
+
+
+.center {
+  display: table;
+}
+
+.center-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.center-content {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 #footer {
   position: fixed;
   z-index: 100;
-  font-family: 'Quicksand';
   font-weight: bold;
 }
 
