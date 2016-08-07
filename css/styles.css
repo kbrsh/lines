@@ -11,30 +11,38 @@ input {
 button {
   font-family: 'Source Code Pro';
 }
-/*#message {*/
-/*  font-weight: bold;*/
-/*  font-size: 6rem;*/
-/*}*/
+
+#message {
+  font-weight: bold;
+  font-size: 3rem;
+}
 
 #lines {
   font-weight: bolder;
 }
 
-
-.center-contain {
-  display: table;
-}
-
-.center-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.center-content {
-  margin-left: auto;
-  margin-right: auto;
+.center {
   text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+/*.center-contain {*/
+/*  display: table;*/
+/*}*/
+
+/*.center-cell {*/
+/*  display: table-cell;*/
+/*  vertical-align: middle;*/
+/*}*/
+
+/*.center-content {*/
+/*  margin-left: auto;*/
+/*  margin-right: auto;*/
+/*  text-align: center;*/
+/*}*/
 #footer {
   position: fixed;
   z-index: 100;
