@@ -1,4 +1,4 @@
-# lines
+# [lines](https://kingpixil.github.io/lines)
 
 count the lines of code a user on Github has written
 
